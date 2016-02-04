@@ -1,1 +1,3 @@
-Download and swap for proper wrapper here http://www.bayesfusion.com/#!downloads/rxu9q
+jSmile (wrapper for bayesian network inference library) should be added to classpath (smile.jar and libjsmile.jnilib)
+
+Download and swap for proper wrapper (if needed) here http://www.bayesfusion.com/#!downloadpaths/rxu9q
