@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Network1" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="Zoltaczka_przedwatrobowa">
+			<state id="true" />
+			<state id="false" />
+			<probabilities>0.05 0.95</probabilities>
+		</cpt>
+		<cpt id="Zoltaczka_watrobowa">
+			<state id="true" />
+			<state id="false" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Zoltaczka_pozawatrobowa">
+			<state id="true" />
+			<state id="false" />
+			<probabilities>0.01 0.99</probabilities>
+		</cpt>
+		<cpt id="Podwyszona_Bilirubina_posrednia">
+			<state id="true" />
+			<state id="false" />
+			<parents>Zoltaczka_przedwatrobowa Zoltaczka_watrobowa</parents>
+			<probabilities>0.5 0.5 0.95 0.05 0.3 0.7 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Podwyszona_Bilirubina_bezposrednia">
+			<state id="true" />
+			<state id="false" />
+			<parents>Zoltaczka_watrobowa Zoltaczka_pozawatrobowa</parents>
+			<probabilities>0.99 0.01 0.8 0.2 0.75 0.25 0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="Podwyszona_Bilirubina_bezposrednia_w_moczu">
+			<state id="true" />
+			<state id="false" />
+			<parents>Zoltaczka_watrobowa Zoltaczka_pozawatrobowa</parents>
+			<probabilities>0.95 0.05 0.7 0.3 0.6 0.4 0.4 0.6</probabilities>
+		</cpt>
+		<cpt id="Urobilinogen_w_moczu">
+			<state id="true" />
+			<state id="false" />
+			<parents>Podwyszona_Bilirubina_posrednia Podwyszona_Bilirubina_bezposrednia Podwyszona_Bilirubina_bezposrednia_w_moczu</parents>
+			<probabilities>0.6 0.4 1 0 0.5 0.5 0.8 0.2 0.5 0.5 0.5 0.5 0 1 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Swiad_skory">
+			<state id="true" />
+			<state id="false" />
+			<parents>Podwyszona_Bilirubina_bezposrednia Podwyszona_Bilirubina_bezposrednia_w_moczu</parents>
+			<probabilities>0.9 0.1 0.5 0.5 0.8 0.2 0 1</probabilities>
+		</cpt>
+		<cpt id="Obnizona_Haptoglobina">
+			<state id="true" />
+			<state id="false" />
+			<parents>Podwyszona_Bilirubina_posrednia</parents>
+			<probabilities>0.98 0.02 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="PodwyzszibaFosfataza_alkaliczna">
+			<state id="true" />
+			<state id="false" />
+			<parents>Podwyszona_Bilirubina_bezposrednia Podwyszona_Bilirubina_bezposrednia_w_moczu</parents>
+			<probabilities>1 0 0.6 0.4 0.7 0.3 0 1</probabilities>
+		</cpt>
+		<cpt id="Bole_miesni">
+			<state id="true" />
+			<state id="false" />
+			<parents>Podwyszona_Bilirubina_bezposrednia Podwyszona_Bilirubina_posrednia</parents>
+			<probabilities>0.7 0.3 0.4 0.6 0.3 0.7 0.5 0.5</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.0.5590.0" name="Network1" faultnameformat="nodestate">
+			<node id="Zoltaczka_przedwatrobowa">
+				<name>Zoltaczka przedwatrobowa</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>222 104 378 230</position>
+			</node>
+			<node id="Zoltaczka_watrobowa">
+				<name>Zoltaczka watrobowa</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>450 110 583 221</position>
+			</node>
+			<node id="Zoltaczka_pozawatrobowa">
+				<name>Zoltaczka pozawatrobowa</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>688 117 813 226</position>
+			</node>
+			<node id="Podwyszona_Bilirubina_posrednia">
+				<name>Podwyszona Bilirubina posrednia</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>290 303 417 400</position>
+			</node>
+			<node id="Podwyszona_Bilirubina_bezposrednia">
+				<name>Podwyszona Bilirubina bezposrednia</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>486 305 613 402</position>
+			</node>
+			<node id="Podwyszona_Bilirubina_bezposrednia_w_moczu">
+				<name>Podwyszona Bilirubina bezposrednia w moczu</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>689 312 816 409</position>
+			</node>
+			<node id="Urobilinogen_w_moczu">
+				<name>Urobilinogen w moczu</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>608 603 743 680</position>
+			</node>
+			<node id="Swiad_skory">
+				<name>Swiad skory</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>437 599 553 667</position>
+			</node>
+			<node id="Obnizona_Haptoglobina">
+				<name>Obnizona Haptoglobina</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>107 494 254 601</position>
+			</node>
+			<node id="PodwyzszibaFosfataza_alkaliczna">
+				<name>Podwyzsziba Fosfataza alkaliczna</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>774 486 905 567</position>
+			</node>
+			<node id="Bole_miesni">
+				<name>Bole miesni</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>291 500 414 570</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
