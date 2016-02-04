@@ -1,3 +1,5 @@
+This is set up for MAC OS X x64
+
 jSmile (wrapper for bayesian network inference library) should be added to classpath (smile.jar and libjsmile.jnilib)
 
-Download and swap for proper wrapper (if needed) here http://www.bayesfusion.com/#!downloadpaths/rxu9q
+Download and swap for proper wrapper (if needed, e.g. other OSes) here http://www.bayesfusion.com/#!downloadpaths/rxu9q
